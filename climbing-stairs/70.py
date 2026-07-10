@@ -1,9 +1,16 @@
 class Solution:
     def climbStairs(self, n: int) -> int:
-        o, t = 1, 1
+        if n == 1:
+            return 1
 
-        for i in range(n - 1):
-            temp = o
-            o = o + t
-            t = temp
-        return o
+        if n == 2:
+            return 2
+        
+
+        prev, curr = 1, 2
+
+        for stair in range(3, n+1):
+            prev, curr = curr, prev + curr
+        
+
+        return curr
