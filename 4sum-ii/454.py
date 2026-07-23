@@ -24,6 +24,9 @@ hashmap: pair_sum -> number of (i,j) pairs because we care about the number of t
 so now we only have to loop through nums3 and nums4 which is O(n^2) so we look for the negative of their sum
 """
 
+from typing import List
+
+
 class Solution:
     def fourSumCount(self, nums1: List[int], nums2: List[int], nums3: List[int], nums4: List[int]) -> int:
         pair_sum = {}
